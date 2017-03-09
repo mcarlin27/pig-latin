@@ -13,6 +13,8 @@ var toPigLatin = function(inputString) {
     }
   });
   console.log(outputArray);
+  var resultString = outputArray.join(" ");
+  return resultString;
 
 
 
