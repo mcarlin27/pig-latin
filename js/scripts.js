@@ -1,6 +1,13 @@
 // business logic
 var toPigLatin = function(inputString) {
-  return inputString.toLowerCase().split(" ");
+  var words = inputString.toLowerCase().split(" ");
+  var outputArray = [];
+  words.forEach(function(word) {
+    if (!isNaN(parseFloat(word))) {
+      outputArray.push(word);
+    };
+  });
+  console.log(outputArray);
 
 
 
@@ -17,9 +24,9 @@ var toPigLatin = function(inputString) {
 $(function() {
   $("form").submit(function(event){
     var inputString = $("#input").val();
-    console.log(inputString);
+    // console.log(inputString);
     var outputString = toPigLatin(inputString);
-    console.log(outputString);
+    // console.log(outputString);
     $("#output").text(outputString);
 
     event.preventDefault();
